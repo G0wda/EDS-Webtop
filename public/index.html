@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Manager</title>
+</head>
+<body>
+    <h1>Service Manager</h1>
+    <button onclick="startInstance()">Start Instance</button>
+    <button onclick="stopInstance()">Stop Instance</button>
+    <button onclick="listInstances()">List Instances</button>
+
+    <script>
+        const username = prompt("Enter your username");
+
+        async function startInstance() {
+            const response = await fetch('/start-instance', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username })
+            });
+            const data = await response.json();
+            alert(JSON.stringify(data));
+        }
+
+        async function stopInstance() {
+            const response = await fetch('/stop-instance', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username })
+            });
+            const data = await response.json();
+            alert(JSON.stringify(data));
+        }
+
+        async function listInstances() {
+            const response = await fetch('/list-instances');
+            const data = await response.json();
+            alert(JSON.stringify(data));
+        }
+    </script>
+</body>
+</html>

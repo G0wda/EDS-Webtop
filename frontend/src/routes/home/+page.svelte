@@ -7,7 +7,7 @@
 </div>
 <div class="feature-grid">
     <div class="feature-card">
-      <h3>Instant Access</h3>
+      <h3>Ubuntu</h3>
       <p>Start coding in seconds with pre-configured Linux environments</p>
     </div>
     <div class="feature-card">

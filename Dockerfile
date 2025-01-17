@@ -1,5 +1,5 @@
 # Use the specified base image
-FROM ghcr.io/linuxserver/webtop:ubuntu-mate
+FROM ghcr.io/linuxserver/webtop:ubuntu-xfce
 
 # Set environment variables
 ENV PUID=1000 \
